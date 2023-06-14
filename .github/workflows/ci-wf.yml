@@ -16,3 +16,14 @@ jobs:
         cd DotnetTemplate.Web
         npm install
         npm run build
+    
+    - name: DotNet Test
+      run: dotnet test
+
+    - name: npm test
+      run: |
+        cd DotnetTemplate.Web
+        npm t
+    
+    - name: npm linting
+      run: npm run lint
